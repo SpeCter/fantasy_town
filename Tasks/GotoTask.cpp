@@ -6,10 +6,10 @@ flak::Tasks::GotoTask::GotoTask(int x, int y)
 {
 }
 
-void flak::Tasks::GotoTask::SetOwner(Entity* entity)
+void flak::Tasks::GotoTask::SetOwner(Entity entity)
 {
-  m_velocity = entity->GetComponent<flak::Components::Velocity>();
-  m_position = entity->GetComponent<flak::Components::Position>();
+  m_velocity = entity.GetComponent<flak::Components::Velocity>();
+  m_position = entity.GetComponent<flak::Components::Position>();
   m_assigned = true;
 }
 

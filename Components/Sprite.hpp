@@ -7,7 +7,6 @@ namespace Components {
     struct Sprite : public Component<Sprite>
     {
       Sprite(uint64_t entity_id);
-      Sprite(Entity* entity);
       const std::string GetName() override;
       sf::RectangleShape shape;
     };

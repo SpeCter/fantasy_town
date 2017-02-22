@@ -12,7 +12,7 @@ namespace flak
         m_choptime = 5.0;
       }
 
-      void SetOwner(Entity* entity) override
+      void SetOwner(Entity entity) override
       {
         m_assigned = true;
       }

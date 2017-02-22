@@ -26,10 +26,10 @@ int main(int argc, char *argv[])
   world.RegisterSystem<Systems::MovementSystem>();
   world.RegisterSystem<Systems::RenderSystem>(window);
   world.RegisterSystem<Systems::TaskSystem>();
-  TaskManager lumberyard;
+  TaskManager lumberyard(world);
 
   world.GetSystem<Systems::TaskSystem>()->RegisterTaskManager(&lumberyard);
-  for(auto n = 0u;n < 1000;++n)
+  for(auto n = 0u;n < 100;++n)
   {
     auto ent = world.CreateEntity();
     ent.AddComponent<Components::Position>(400.0f,300.0f);

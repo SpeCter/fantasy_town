@@ -32,7 +32,7 @@ namespace flak
       }
       unsigned int n = 0;
 
-      void SetOwner(Entity* entity) override
+      void SetOwner(Entity entity) override
       {
         for(auto&& task : m_subtasks)
         {

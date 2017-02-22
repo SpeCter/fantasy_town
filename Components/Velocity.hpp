@@ -11,8 +11,6 @@ namespace flak
     {
       Velocity(uint64_t entity_id, float x, float y);
       Velocity(uint64_t entity_id);
-      Velocity(Entity* entity, float x, float y);
-      Velocity(Entity* entity);
       const std::string GetName() override;
       float x,y;
     };

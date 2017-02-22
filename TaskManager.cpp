@@ -1,8 +1,10 @@
 #include "Tasks/TaskManager.hpp"
 #include "Tasks/Task.hpp"
 #include "Components/TaskQueue.hpp"
+#include "World.hpp"
 
-flak::TaskManager::TaskManager()
+flak::TaskManager::TaskManager(World& world)
+ : m_world(world)
 {
 
 }
@@ -31,7 +33,7 @@ void flak::TaskManager::Update(double dt)
       else
       {
         task_queue->m_tasks.push_back(m_available_tasks[n]);
-        m_available_tasks[n]->SetOwner(task_queue->m_entity);
+        m_available_tasks[n]->SetOwner(m_world.GetEntity(task_queue->m_entity_id));
         break;
       }
     }

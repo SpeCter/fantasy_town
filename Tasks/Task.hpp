@@ -12,7 +12,7 @@ namespace flak
       {
       }
       void AddTask();
-      virtual void SetOwner(Entity* entity) = 0;
+      virtual void SetOwner(Entity entity) = 0;
       virtual void Update(double dt)  = 0;
       virtual bool Finished() const = 0;
       virtual bool IsAssigned()

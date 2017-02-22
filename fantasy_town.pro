@@ -6,7 +6,7 @@ DEFINES += SFML_STATIC
 LIBS += -Le:/libs/lib
 INCLUDEPATH += e:/libs/include
 INCLUDEPATH += e:/libs/imgui
-QMAKE_CXXFLAGS_DEBUG += -g
+
 CONFIG(release, debug|release): LIBS += -lsfml-graphics-s -lfreetype -ljpeg -lsfml-window-s -lopengl32 -lgdi32 -lsfml-system-s -lwinmm
 
 CONFIG(debug, debug|release): LIBS += -lsfml-graphics-s-d -lfreetype -ljpeg -lsfml-window-s-d -lopengl32 -lgdi32 -lsfml-system-s-d -lwinmm

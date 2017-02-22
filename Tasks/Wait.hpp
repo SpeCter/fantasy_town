@@ -8,9 +8,9 @@ namespace flak
   {
     struct Wait : public Task
     {
-      void SetOwner(Entity* entity) override
+      void SetOwner(Entity entity) override
       {
-        m_velocity = entity->GetComponent<Components::Velocity>();
+        m_velocity = entity.GetComponent<Components::Velocity>();
       }
       void Update(double dt) override
       {

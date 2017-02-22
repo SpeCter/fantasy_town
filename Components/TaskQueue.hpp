@@ -12,7 +12,6 @@ namespace flak
     struct TaskQueue : public Component<TaskQueue>
     {
       TaskQueue(uint64_t entity_id);
-      TaskQueue(Entity* entity);
       const std::string GetName() override;
       std::vector<Tasks::Task*> m_tasks;
     };

@@ -21,7 +21,7 @@ public:
   template<typename T,typename...Args>
   void AddComponent(Args&&... args)
   {
-    m_componentManager.Add<T>(this,args...);
+    m_componentManager.Add<T>(m_id,args...);
     m_component_ids.push_back(Type::value<T>());
   }
   template<typename T>

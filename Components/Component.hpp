@@ -18,7 +18,6 @@ namespace flak
       virtual const std::string GetName() = 0;
       uint64_t m_type;
       uint64_t m_entity_id;
-      Entity*  m_entity;
     };
 
     template<typename T>
