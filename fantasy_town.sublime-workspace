@@ -1,0 +1,2083 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Zaehl",
+				"ZaehlEvent"
+			],
+			[
+				"CanOrdZ",
+				"CanOrdSendZaehlung"
+			],
+			[
+				"cVKUI",
+				"cVKUI16A3"
+			],
+			[
+				"lua_",
+				"lua_install_dir"
+			],
+			[
+				"YB",
+				"Yb_info"
+			],
+			[
+				"eYb",
+				"eYB_MachineOFF_JSI"
+			],
+			[
+				"yb",
+				"yb_info\tu_int16 yb_info"
+			],
+			[
+				"fs",
+				"fshValue\tu_int16 fshValue"
+			],
+			[
+				"_Flg",
+				"_Flg2"
+			],
+			[
+				"gJsi",
+				"gJSIanspinnerFlag"
+			],
+			[
+				"eEvt",
+				"eEvtAnwFehler"
+			],
+			[
+				"eEvtAnw",
+				"eEvtAnwWarnung"
+			],
+			[
+				"eE",
+				"eEvtSysFehler"
+			],
+			[
+				"CanOrd",
+				"CanOrdSendApplError"
+			],
+			[
+				"in",
+				"inc\t#include \"…\""
+			],
+			[
+				"power",
+				"powerfailFlashData"
+			],
+			[
+				"pow",
+				"powerfailFlashData"
+			],
+			[
+				"powerfail",
+				"powerfailData"
+			],
+			[
+				"_",
+				"_test"
+			],
+			[
+				"jsi",
+				"jsiSetting"
+			],
+			[
+				"sJsi",
+				"sJsiState"
+			],
+			[
+				"tJsi",
+				"tJsiStateInfo"
+			],
+			[
+				"jsiSt",
+				"jsiStateInfo\tstruct (anonymous) jsiStateInfo"
+			],
+			[
+				"gmy",
+				"gmyJsiInfo"
+			],
+			[
+				"jsist",
+				"jsiStateInfo\tstruct (anonymous) jsiStateInfo"
+			],
+			[
+				"pAppl",
+				"pApplData+0"
+			],
+			[
+				"tMdr",
+				"tMdrJsiStateInfo"
+			],
+			[
+				"tMd",
+				"tMdrJsiState"
+			],
+			[
+				"uJsi",
+				"uJsiSetting\ttMdrJsiSetting uJsiSetting"
+			],
+			[
+				"tUin",
+				"tUInt16"
+			],
+			[
+				"uJsiSt",
+				"uJsiStateInfo\ttMdrJsiStateInfo uJsiStateInfo"
+			],
+			[
+				"sFil",
+				"sFillByte2"
+			],
+			[
+				"ujsi",
+				"uJsiStateInfo.sRotVel_L_200_olo"
+			],
+			[
+				"right",
+				"rightState"
+			],
+			[
+				"left",
+				"leftState"
+			],
+			[
+				"s",
+				"sJsiState_L\ttMdrJsiState sJsiState_L"
+			],
+			[
+				"sjsi",
+				"sJsiState_L\ttMdrJsiState sJsiState_L"
+			],
+			[
+				"sJs",
+				"sJsiState_R"
+			],
+			[
+				"eJsi",
+				"eJsiSdFinished"
+			],
+			[
+				"eJSI",
+				"eJsiStaOff"
+			],
+			[
+				"machine",
+				"machineReady"
+			],
+			[
+				"tB",
+				"tBoolean"
+			],
+			[
+				"eJsiSt",
+				"eJsiStaRunning"
+			],
+			[
+				"myJSi",
+				"myJsiInfo.ST.myJsiState"
+			],
+			[
+				"eJsiSd",
+				"eJsiSdRotorNolo"
+			],
+			[
+				"setloc",
+				"SetlocValve_SuctionAir_off"
+			],
+			[
+				"jsiFeedi",
+				"jsiFeedingStop_ms\ttJsiFeedingStop_ms jsiFeedingStop_ms"
+			],
+			[
+				"tM",
+				"tMdrJsiStateInfo"
+			],
+			[
+				"Last",
+				"Last_Diameter_mm"
+			],
+			[
+				"tim",
+				"timer\tu_int16 timer"
+			],
+			[
+				"tP",
+				"tPowerfailFlashData"
+			],
+			[
+				"yB",
+				"Yb_info"
+			],
+			[
+				"eYB",
+				"eYB_MachineOFF_JSI"
+			],
+			[
+				"Yb",
+				"Yb_info"
+			],
+			[
+				"gJSI",
+				"gJSIactualGoingDown"
+			],
+			[
+				"stopped",
+				"hasStoppedWithJsi"
+			],
+			[
+				"per",
+				"persistData"
+			],
+			[
+				"FlashStore",
+				"FlashStore"
+			],
+			[
+				"par",
+				"parity"
+			],
+			[
+				"has",
+				"hasStoppedWithJsi"
+			],
+			[
+				"persist",
+				"persistData"
+			],
+			[
+				"pers",
+				"persistData"
+			],
+			[
+				"sJ",
+				"sJsiParameter_L\ttUInt16 sJsiParameter_L"
+			],
+			[
+				"ap",
+				"applP"
+			],
+			[
+				"ui",
+				"tUInt16"
+			],
+			[
+				"feed",
+				"feedingStopInfo"
+			],
+			[
+				"fee",
+				"feedingStopInfo"
+			],
+			[
+				"uin",
+				"u_int16"
+			],
+			[
+				"need",
+				"needToStop\ttBoolean needToStop"
+			],
+			[
+				"ti",
+				"timerLeft\tu_int16 timerLeft"
+			],
+			[
+				"m_",
+				"m_bLokalNodeAddr\tu_int8 m_bLokalNodeAddr"
+			],
+			[
+				"my",
+				"myJsiInfo"
+			],
+			[
+				"myJ",
+				"myJsiInfo"
+			],
+			[
+				"Bit",
+				"BitseChk_and_store"
+			],
+			[
+				"Hdlrcln",
+				"HdlrClntProParam"
+			],
+			[
+				"cVK",
+				"cVKUI8"
+			],
+			[
+				"cVA",
+				"cVA_W_"
+			],
+			[
+				"CanVar",
+				"CanVarDb"
+			],
+			[
+				"eBo",
+				"eBobbinSinkAndRun"
+			],
+			[
+				"EM",
+				"eMotPwrHold"
+			],
+			[
+				"eMotP",
+				"eMotPwrOff"
+			],
+			[
+				"ix",
+				"ix_ms"
+			],
+			[
+				"gTa",
+				"gTakeupActualSpeed_tic"
+			],
+			[
+				"Spn",
+				"SpnTabTake_sFreq"
+			],
+			[
+				"new",
+				"NewConfFile"
+			],
+			[
+				"pA",
+				"pApplData"
+			],
+			[
+				"Clr",
+				"eClrWithdraw_undefined"
+			],
+			[
+				"ClrWith",
+				"ClrWithdrawInfo"
+			],
+			[
+				"bobbin_r",
+				"bobbin_rot_timer"
+			],
+			[
+				"ClrTimeout",
+				"ClrWithdrawTimeout_ms"
+			],
+			[
+				"Abzieh",
+				"Abziehlaenge_Umdr"
+			],
+			[
+				"u_int",
+				"u_int16"
+			],
+			[
+				"Bobbin",
+				"BobbinMove"
+			],
+			[
+				"cSN_",
+				"cSN_NormalWait_10_2"
+			],
+			[
+				"eMotPwer",
+				"eMotPwrAccelerate"
+			],
+			[
+				"eMotPw",
+				"eMotPwrAccelerate"
+			],
+			[
+				"eMot",
+				"eMotFeed"
+			],
+			[
+				"e",
+				"else"
+			],
+			[
+				"SpnTabY",
+				"SpnTabYbTakeClms"
+			],
+			[
+				"Take",
+				"Take_Ramp_Cnt"
+			],
+			[
+				"if",
+				"if\tIf Condition"
+			],
+			[
+				"m",
+				"main\tmain()"
+			],
+			[
+				"fcy",
+				"fcyLen"
+			],
+			[
+				"g",
+				"gCurrentEffect"
+			],
+			[
+				"warte",
+				"Wartezeit"
+			],
+			[
+				"Reiniger",
+				"Reinigerstop"
+			],
+			[
+				"ClrT",
+				"ClrWithdrawTimeout"
+			],
+			[
+				"cP",
+				"cPiecingParamsTodo_1"
+			],
+			[
+				"ef",
+				"eFcyApply"
+			],
+			[
+				"eFcy",
+				"eFcyGet"
+			],
+			[
+				"eF",
+				"eFcyGet"
+			],
+			[
+				"ge",
+				"gElapsedTime_ms"
+			],
+			[
+				"pro",
+				"prodSpeed100mmlmin"
+			],
+			[
+				"gcurrent",
+				"gCurrentEffect"
+			],
+			[
+				"get",
+				"getNextFancyPair"
+			],
+			[
+				"pack",
+				"packFcyValueP"
+			],
+			[
+				"u",
+				"u_int32"
+			],
+			[
+				"pacl",
+				"packFcyValueP"
+			],
+			[
+				"tFcy",
+				"tFcyValPak"
+			],
+			[
+				"addit",
+				"additional_error_m"
+			],
+			[
+				"clr",
+				"ClrWithdrawTimeout"
+			],
+			[
+				"cSN",
+				"cSN_NormalWait_10_2"
+			],
+			[
+				"Ab",
+				"Abziehlaenge_Umdr"
+			],
+			[
+				"cSN_No",
+				"cSN_NormalWait_10_1"
+			],
+			[
+				"State",
+				"State_Number"
+			],
+			[
+				"switch",
+				"switchOn_Redlight"
+			],
+			[
+				"num",
+				"sNumPairs"
+			],
+			[
+				"for",
+				"forv\tVector For Loop"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "Shops/Guilds etc. :\n  - Alchemist\n    - potions\n    - herbs\n    - bombs\n  - Weaponsmith\n  - Armory\n  - Shop\n  - Marketplace - non controlable\n  - Adventurers Guild\n    - access to special items\n  - Town Hall - non controlable\n  - Church\n  - Bank/Loaner\n  - Library\n    - knowledge\n  - Mines\n    - ores,crystals etc.\n\nDevplan:\n  - entity-component system base implementation\n  - basic lua integration\n  - basic layout\n    - first standard grid, later \"freeform\"\n    - predefined buildings\n  - basic people\n  - basic attributes/traits\n  - basic jobs\n  - basic items\n  - basic town simulation\n    - tasksystem\n      - create and run task depending on character/occupation/daytime\n      - virtual first, graphical later\n    - pathfinding\n  - basic shops\n  - basic dungeoneering\n  - save/load\n  - gui\n\nTools:\n  - SFML\n  - Lua(sol2)\n  - sqlite?",
+			"file": "documentation/overview.txt",
+			"file_size": 867,
+			"file_write_time": 131316268403320244,
+			"settings":
+			{
+				"buffer_size": 838,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "documentation/races.txt",
+			"settings":
+			{
+				"buffer_size": 575,
+				"encoding": "Western (Windows 1252)",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "fantasy_town.sublime-project",
+			"settings":
+			{
+				"buffer_size": 91,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ComponentSystem.hpp",
+			"settings":
+			{
+				"buffer_size": 1085,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/Projekte/comp_test/ComponentSystem.hpp",
+			"settings":
+			{
+				"buffer_size": 870,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/Projekte/comp_test/ComponentManager.hpp",
+			"settings":
+			{
+				"buffer_size": 1871,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "ComponentManager.hpp",
+			"settings":
+			{
+				"buffer_size": 1858,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/Projekte/comp_test/main.cpp",
+			"settings":
+			{
+				"buffer_size": 5482,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"todo",
+				"TodoReview: Project and Open Files"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"todo ",
+				"TodoReview: Project and Open Files"
+			],
+			[
+				"totdo",
+				"TodoReview: Project and Open Files"
+			],
+			[
+				"git ",
+				"Git: Status"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"satisfy",
+				"Package Control: Satisfy Dependencies"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"rev",
+				"TodoReview: Open Files"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"smart",
+				"smartifdef"
+			],
+			[
+				"review",
+				"TodoReview: Open Files"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"sublimeli",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"re",
+				"Package Control: Remove Package"
+			],
+			[
+				"toggle lin",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"ints",
+				"Package Control: Install Package"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 472.0
+	},
+	"console":
+	{
+		"height": 208.0,
+		"history":
+		[
+			"print(project_base_path)",
+			"print($project_base_path)",
+			"print(\"Hallo\")",
+			"print $project_base_path",
+			"$project_base_path",
+			"clang",
+			"view.encoding()",
+			"sublime.log_commands(True)",
+			"sublime.log_commands(true)",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Projekte/fantasy_town",
+		"/D/Projekte/fantasy_town/documentation",
+		"/D/Projekte/comp_test"
+	],
+	"file_history":
+	[
+		"/D/Projekte/fantasy_town/World.hpp",
+		"/D/Projekte/Tank/CharacterController.cpp",
+		"/C/Users/s077797/AppData/Roaming/QtProject/qtcreator/styles/base16-ocean.dark.xml",
+		"/C/Users/s077797/AppData/Roaming/QtProject/qtcreator/styles/twilight_copy.xml",
+		"/D/Projekte/comp_test/main.cpp",
+		"/C/Users/s077797/AppData/Roaming/QtProject/qtcreator/styles/Wombat_copy.xml",
+		"/K/TriStar/Controller/Implementation/Src/sp_statemachine.c",
+		"/K/TriStar/Controller/Implementation/Src/include/CanMgr.h",
+		"/K/TriStar/Controller/Implementation/Src/include/Params.h",
+		"/K/TriStar/Controller/Implementation/Src/timer0.h",
+		"/K/TriStar/Controller/Implementation/Src/Srv.c",
+		"/K/TriStar/Controller/Implementation/Src/include/Can.h",
+		"/k/tristar/controller/implementation/src/driver/iodrive_fancy.c",
+		"/K/TriStar/Controller/Implementation/Src/Can.c",
+		"/K/TriStar/Controller/Implementation/Src/include/SpnCanVar.h",
+		"/K/TriStar/Controller/Implementation/Src/include/Err.h",
+		"/K/TriStar/Controller/Implementation/Src/include/ErrCodes.h",
+		"/K/TriStar/Controller/Implementation/Src/Timer0.c",
+		"/K/TriStar/Controller/Implementation/Src/include/Spn2CanVar.h",
+		"/D/sources/lua-5.3.4/CreateLuaDist.bat",
+		"/D/Projekte/QxTimeLineEditor-master/src/keyframeitem.cpp",
+		"/D/Projekte/QxTimeLineEditor-master/src/qxtimelineeditor.cpp",
+		"/K/TriStar/Controller/Implementation/Src/CanFunc.c",
+		"/C/Users/s077797/AppData/Roaming/Sublime Text 3/Packages/User/TodoReview.sublime-settings",
+		"/C/Users/s077797/AppData/Roaming/Sublime Text 3/Packages/TodoReview/TodoReview.sublime-settings",
+		"/D/Projekte/sfml-resourcemgr/settings.lua",
+		"/D/Projekte/flakes2/flakes2/Component.hpp",
+		"/D/Projekte/comp_test/ComponentManager.hpp",
+		"/D/Projekte/comp_test/ComponentSystem.hpp",
+		"/D/Projekte/flakes2/flakes2/ComponentSystem.hpp",
+		"/D/Projekte/flakes2/flakes/EntitySystem.hpp",
+		"/D/Projekte/flakes2/flakes2/Type.hpp",
+		"/D/Projekte/flakes2/flakes2/Type.cpp",
+		"/D/Projekte/flakes2/flakes2/Entity.hpp",
+		"/C/Users/s077797/Downloads/smart-resource-manager/ResourceManager.hpp",
+		"/C/Users/s077797/Downloads/smart-resource-manager/MemoryPool.hpp",
+		"/D/sources/SFML/CMakeLists.txt",
+		"/C/Users/s077797/Downloads/smart-resource-manager/Resource.hpp",
+		"/D/git_projects/cpp-rpg-tutorial/src/entity_manager.cpp",
+		"/D/git_projects/cpp-rpg-tutorial/src/entity.hpp",
+		"/D/git_projects/cpp-rpg-tutorial/areas.json",
+		"/D/Qt/Qt5.8.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/bits/vector.tcc",
+		"/C/Users/s077797/pip/pip.ini",
+		"/C/Users/s077797/.conan/conan.conf",
+		"/D/batchtest/echotest.bat",
+		"/K/TriStar/Controller/Implementation/Src/include/cancalls.h",
+		"/K/TriStar/Controller/Implementation/Src/include/can_type.h",
+		"/K/TriStar/Controller/Implementation/.clang_complete",
+		"/K/TriStar/Controller/Implementation/Src/include/canlib.h",
+		"/K/TriStar/Controller/Implementation/test.dat",
+		"/F/BD6Fancy.fcn",
+		"/D/222meter.txt",
+		"/D/Projekte/fancyconv/test.dat",
+		"/D/Users/s077797/Desktop/TexdeDunes02.dat",
+		"/D/Projekte/fancyconv/output.txt",
+		"/D/Projekte/bztofancy/debug/mitschrift_sesli.txt",
+		"/I/Konfig.inf",
+		"/D/Corolab/Messdaten/sesli/Maschine_6/2017_01_26/Lokaler_Bus/SpSt_Mitschrift/Data_YMDHMS_17_01_26__08_33_29_Logg.txt",
+		"/D/Programme/Fancynation/g585.cfg",
+		"/F/fancysesli.dat",
+		"/D/Projekte/fancyconv/output.dat",
+		"/F/Ne12SF.fcy",
+		"/K/TriStar/Controller/Implementation/Src/DbgSrc/dbgprint.h",
+		"/k/tristar/controller/implementation/src/sp_statemachine.c",
+		"/K/TriStar/Controller/Implementation/Src/Timer0.h",
+		"/K/TriStar/Controller/Implementation/Src/Params.c",
+		"/D/Corolab/Messdaten/200120017/Maschine_1/2017_01_20/Lokaler_Bus/SpSt_Mitschrift/Data_YMDHMS_17_01_20__13_16_26_Logg.txt",
+		"/D/Users/s077797/Documents/12Z2-03.fcn",
+		"/K/Can-Db/autoinc/SpnErrCode.h",
+		"/K/TriStar/Controller/Implementation/Src/include/types.h",
+		"/K/TriStar/Controller/Implementation/Src/include/IoDrive_Flash.h",
+		"/K/TriStar/Controller/Implementation/Src/MAIN.C",
+		"/D/Corolab/Messdaten/200120017/Maschine_1/2017_01_20/Lokaler_Bus/SpSt_Mitschrift/Data_YMDHMS_17_01_20__11_12_11_Logg.txt",
+		"/D/Corolab/Messdaten/test_neu/Maschine_1/2017_01_19/Lokaler_Bus/SpSt_Roh/SpSt51_YMDHMS_17_01_19__16_22_32_.CAN",
+		"/D/Corolab/Messdaten/test_neu/Maschine_1/2017_01_19/Lokaler_Bus/SpSt_Roh/SpSt51_YMDHMS_17_01_19__16_24_36_.CAN",
+		"/D/Corolab/Messdaten/test_neu/Maschine_1/2017_01_19/Lokaler_Bus/SpSt_Roh/SpSt51_YMDHMS_17_01_19__16_27_38_.CAN",
+		"/K/TriStar/Controller/Implementation/Src/DbgSrc/serdbgp.c",
+		"/K/TriStar/Controller/Implementation/WithBtl_MB96356/LST/SPNRelBtl_FX356.mp1",
+		"/K/TriStar/Controller/Implementation/WithBtl_MB96356/LST/SPNRelBtl_FX356.mps",
+		"/K/TriStar/Controller/Implementation/WithBtl_MB96356/LST/analogtest.lst",
+		"/K/TriStar/Controller/Implementation/WithBtl_MB96356/LST/ANALOGTEST.ALS",
+		"/K/TriStar/Controller/Implementation/Src/include/HWtarget.h",
+		"/C/Program Files (x86)/Microsoft Visual C++ Build Tools/vcbuildtools.bat",
+		"/U/Labview daten/Graphische Übersicht/ReadSensors.vi",
+		"/U/.gitconfig",
+		"/H/treeinfo.wc",
+		"/D/Users/s077797/Documents/Let-s-build-a-compiler-master/6/tutor6.txt",
+		"/K/TriStar/Controller/Implementation/WithBtl_MB96356/ABS/SPNRelBtl_FX356_all_2008fe4d.mhx",
+		"/K/TriStar/Controller/Implementation/WithBtl_MB96356/ABS/sp.bin",
+		"/K/TriStar/Controller/Implementation/WithBtl_MB96356/ABS/13_SpnA01_2008fe4d.bin",
+		"/D/Users/s077797/Documents/Let-s-build-a-compiler-master/5/tutor5.txt",
+		"/D/Users/s077797/Documents/sublime projects/tristar.sublime-project",
+		"/C/Users/s077797/AppData/Roaming/Sublime Text 3/Packages/BracketHighlighter/bh_core.sublime-settings",
+		"/C/Users/s077797/AppData/Roaming/Sublime Text 3/Packages/User/bh_core.sublime-settings",
+		"/C/Users/s077797/AppData/Roaming/Sublime Text 3/Packages/C Improved/C Improved.tmLanguage",
+		"/K/TriStar/Controller/Implementation/Src/Err.c",
+		"/K/TriStar/Controller/Implementation/Src/canlib/can_event.c",
+		"/K/TriStar/Controller/Implementation/Src/driver/IoDrive_Fancy.c",
+		"/D/Users/s077797/Documents/Let-s-build-a-compiler-master/4/tutor4.txt",
+		"/C/Users/s077797/.atom/.apmrc",
+		"/K/ZentralTools/can_etc/Event.bat",
+		"/K/ZentralTools/can_etc/Abzug.bat",
+		"/D/Users/s077797/Documents/Let-s-build-a-compiler-master/get_chapters.sh",
+		"/D/Users/s077797/Documents/Let-s-build-a-compiler-master/2/tutor2.txt",
+		"/D/Users/s077797/Documents/Let-s-build-a-compiler-master/3/tutor3.txt",
+		"/D/Users/s077797/Documents/BD6Fancy.fcn",
+		"/D/Users/s077797/Documents/Let-s-build-a-compiler-master/1/tutor1.txt",
+		"/D/Users/s077797/Documents/Let-s-build-a-compiler-master/1/cradle.c",
+		"/K/TriStar/Controller/Implementation/Src/include/compiler_HAL.h",
+		"/K/TriStar/Controller/Implementation/WithBtl_MB96356/CBtlApp.ini",
+		"/K/TriStar/Controller/Implementation/Build.bat",
+		"/K/TriStar/Controller/Implementation/README.TXT",
+		"/D/Users/s077797/Desktop/SerNo_16804140012__MaNo_BD6_DCTF/SerNo_16804140012__MaNo_BD6_DCTF/MachineConfig.inf",
+		"/I/SerNo_168XXXXXXXX__MaNo______/MachineConfig.inf",
+		"/I/SerNo_168XXXXXXXX__MaNo______/PGroup_1__2017_01_05__11_00_41.rcp",
+		"/D/Users/s077797/Desktop/SerNo_16810160186__MaNo_01/MachineConfig.inf",
+		"/I/SerNo_16809130000__MaNo_5/MachineConfig.inf",
+		"/D/Users/s077797/Desktop/SerNo_16810160186__MaNo_01/can__2016_12_08__16_37_39.log",
+		"/K/TriStar/Controller/Implementation/Src/analogtest.c",
+		"/K/TriStar/Controller/Implementation/Src/canlib/can_variable.c",
+		"/K/TriStar/Controller/Implementation/Src/canlib/can_comm.c.bak",
+		"/K/TriStar/Controller/Implementation/Src/include/canlib.h.bak",
+		"/K/TriStar/Controller/Implementation/Src/canlib/can_comm.c",
+		"/K/TriStar/Controller/Implementation/Src/canlib/can_download.c",
+		"/K/TriStar/Controller/Implementation/Src/canlib/can_variable.c.bak",
+		"/K/TriStar/Controller/Implementation/Src/canlib/can_event.c.bak",
+		"/K/TriStar/Controller/Implementation/Src/canlib/can_download.c.bak",
+		"/K/TriStar/Controller/Implementation/Src/Can.c.bak"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 109.0,
+		"where_history":
+		[
+			"*.c,*.h",
+			"<current file>",
+			"*.c,*.h",
+			"*.c,*.h,<current file>",
+			"*.c,*.h",
+			"*.c,*.h,<open folders>",
+			"*.c,*.h",
+			"*.mp1",
+			"*.h,*.c",
+			"*.h",
+			"*.c,*.h",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"eSpnCEAnwFehler",
+			"CanOrdSendApplError",
+			"CanOrdEventSend",
+			"eEvtAnwFehler",
+			"eSpnCE",
+			"eSAGSysWarning",
+			"ErrOrdReportSysWarning",
+			"ErrOrdReportAplError",
+			"ErrOrdReportError",
+			"CanOrdEventSend",
+			"CanOrd",
+			"switVal",
+			"eSAGErrStopByOperator",
+			" ",
+			"GarnDatenFanc",
+			" ",
+			"05  00  FA  00  00  00",
+			"Garnda",
+			"domain",
+			"applycu",
+			" ",
+			"applyCurrentFancy",
+			"ErrPackageReady",
+			"ErrPackageDoffedManually",
+			"gMachineReady",
+			"gFlg5",
+			"tBoolean",
+			"cSN_StartAutopiecer13",
+			"cSN_Start",
+			"gSuctionAir_greenflash_onFlag",
+			"cSN_StartAutopiecer13",
+			"gLedFlashKlemmrolleFlag",
+			"cSN_NormalWait_10_2",
+			"jsi",
+			"eJsiStaOff",
+			"JSI",
+			"gCanRestartMsg",
+			"CanOrdSendRestart",
+			"eSpnCEAnlaufMeldung",
+			"fyc crc",
+			"VerbCon",
+			"vEr",
+			"\"%T fcySta",
+			"EVTTABLE",
+			"eEvtAnwFehler",
+			"eCtrStaUnk",
+			"machinestate",
+			"gMachineReady",
+			"cSN_NormalWait_10",
+			"Normal",
+			"waiting",
+			"eSAGSpnErrPiecingAttempt",
+			"eYB_Length",
+			"eSpnCEAnwFehler",
+			"eSpnCEAnwInfo",
+			"EvtCode_t",
+			"{\n",
+			"eSAGSpnErrPiecingAttempt",
+			"eSpnCEZustandWechsel",
+			"Yarnbreak",
+			"CanOrdSendApplError",
+			"eSAGErrFault",
+			"HdlrClntMachineState",
+			"eSAGSpnStatePiecing",
+			"cNewSpnCanVarTAB",
+			"canvar",
+			"NewCan",
+			"eYB_MachineOFF_JSI",
+			"eYB_MachineOff_Gwy",
+			"eYB_MachineOFF_JSI",
+			"feedstop",
+			"TODO:",
+			"TODO",
+			".*\",\n",
+			"mkmkmk",
+			"lst",
+			"Gateway",
+			"GateWay",
+			"flgMachineStop",
+			"_test",
+			"flgMachineStop",
+			"PowerFail",
+			"powerfail",
+			"gJSIwithRampWanted",
+			"pwr",
+			"jsistopping",
+			"sizeof",
+			"jsiSetting",
+			"));",
+			"gmyJsiInfo",
+			"NormalWait_10_2",
+			"NormalWait",
+			"n10 g_C",
+			"n10",
+			"Jsi",
+			");\n",
+			"State_Number",
+			"cSN_Prefeed18",
+			"gMachineReady",
+			"JSI",
+			"NormalWait_10",
+			"NormalWA",
+			"Grundmaschine",
+			"cSN_Normal",
+			"cSN_",
+			"cSN_Wait",
+			"jsiInfo",
+			"eJsiStaRunning",
+			"jsiInfo",
+			"jsifee",
+			"JSI",
+			"Jsi",
+			"eCtrStaOff",
+			"gJSIactualGoingDown",
+			"mainloop",
+			"test_einzu",
+			"HAL_MU",
+			"  /*",
+			"cSN_NormalWait_10_2",
+			"cSN",
+			"chkPWRfail_Ramp",
+			"rmp",
+			"pwrfail",
+			"cSN_StartAutopiecer13",
+			"Yb_info = 9",
+			"iks",
+			"eYB_DiameterError1",
+			"eYB_"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"gMachineReadyFlag",
+			"sRemainingTime_ms",
+			"sRemainingTime",
+			"end_address",
+			"start_address",
+			"rem",
+			"::",
+			" ",
+			"brightness_oloo",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "documentation/overview.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 838,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								71,
+								71
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"function_name_status_row": 4,
+							"open_with_edit": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "documentation/races.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 575,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11,
+								11
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"function_name_status_row": 1,
+							"open_with_edit": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "fantasy_town.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 91,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										89,
+										90
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										0,
+										1
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"function_name_status_row": 0,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "ComponentSystem.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1085,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"function_name_status_row": 0,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "/D/Projekte/comp_test/ComponentSystem.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 870,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"function_name_status_row": 0,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/D/Projekte/comp_test/ComponentManager.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1871,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1819,
+								1743
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										1842,
+										1843
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										1681,
+										1682
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"function_name_status_row": 70,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 741.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "ComponentManager.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1858,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"function_name_status_row": 0,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 342.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/D/Projekte/comp_test/main.cpp",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 5482,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"function_name_status_row": 0,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2793.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.431976744186,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git-pull":
+	{
+		"height": 116.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 98.0
+	},
+	"pinned_build_system": "",
+	"project": "fantasy_town.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Src\\Timer0.c"
+			],
+			[
+				"timer",
+				"Src\\Timer0.c"
+			],
+			[
+				"button",
+				"Implementation\\Src\\Button.c"
+			],
+			[
+				"fun",
+				"Implementation\\Src\\functiontest.c"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\Users\\s077797\\Documents\\sublime projects\\tristar.sublime-project"
+			]
+		],
+		"width": 784.0
+	},
+	"select_symbol":
+	{
+		"height": 400.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"cnew",
+				"cNewSpnCanVarTAB"
+			],
+			[
+				"TDO5_YBSto",
+				"TDO5_YBStop_Init"
+			],
+			[
+				"TDO5_YBStop_Init",
+				"TDO5_YBStop_Init"
+			],
+			[
+				"",
+				"$(CPCINCDIR)/$(CPCCANVAR_H):"
+			],
+			[
+				"TD0_W",
+				"TDO0_Waiting_Ini01"
+			],
+			[
+				"TDO0_",
+				"TDO0_Waiting_Ini01"
+			]
+		],
+		"width": 400.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 200.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

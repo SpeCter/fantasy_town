@@ -1,0 +1,17 @@
+#pragma once
+#include "ComponentSystem.hpp"
+#include "Components/Position.hpp"
+#include "Components/Velocity.hpp"
+
+namespace flak
+{
+  namespace Systems
+  {
+    struct MovementSystem : public ComponentSystem<Components::Position,
+                                                   Components::Velocity>
+    {
+      MovementSystem();
+      void Update(double dt) override;
+    };
+  }
+}
