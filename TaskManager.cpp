@@ -32,6 +32,7 @@ void flak::TaskManager::Update(double dt)
       }
       else
       {
+        //sdfsdfsdf
         task_queue->m_tasks.push_back(m_available_tasks[n]);
         m_available_tasks[n]->SetOwner(m_world.GetEntity(task_queue->m_entity_id));
         break;
