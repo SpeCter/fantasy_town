@@ -3,9 +3,9 @@ CONFIG += console c++1z
 CONFIG -= app_bundle
 CONFIG -= qt
 DEFINES += SFML_STATIC
-LIBS += -Le:/libs/lib
-INCLUDEPATH += e:/libs/include
-INCLUDEPATH += e:/libs/imgui
+LIBS += -Ld:/libs/lib
+INCLUDEPATH += d:/libs/include
+INCLUDEPATH += d:/libs/imgui
 
 CONFIG(release, debug|release): LIBS += -lsfml-graphics-s -lfreetype -ljpeg -lsfml-window-s -lopengl32 -lgdi32 -lsfml-system-s -lwinmm
 
@@ -28,7 +28,9 @@ SOURCES += main.cpp \
     Components/Position.cpp \
     Components/Job.cpp \
     Components/Sprite.cpp \
-    Components/TaskQueue.cpp
+    Components/TaskQueue.cpp \
+    Components/Inventory.cpp \
+    Components/InventoryItem.cpp
 
 HEADERS += \
     Component.hpp \
@@ -69,4 +71,6 @@ HEADERS += \
     Tasks/TaskManager.hpp \
     Tasks/GetWood.hpp \
     Tasks/ChopWood.hpp \
-    Tasks/Wait.hpp
+    Tasks/Wait.hpp \
+    Components/Inventory.hpp \
+    Components/InventoryItem.hpp

@@ -13,16 +13,26 @@
 
 using namespace flak;
 
+void RenderOverlay(const sf::Time& time)
+{
+  ImGui::SetNextWindowPos(ImVec2(10,10));
+  if (!ImGui::Begin("Example: Fixed Overlay", nullptr, ImVec2(0,0), 0.3f, ImGuiWindowFlags_NoTitleBar|ImGuiWindowFlags_NoResize|ImGuiWindowFlags_NoMove|ImGuiWindowFlags_NoSavedSettings))
+  {
+      ImGui::End();
+  }
+  ImGui::Text("Mouse Position: (%.1f,%.1f)", ImGui::GetIO().MousePos.x, ImGui::GetIO().MousePos.y);
+  ImGui::Text("FPS:%.f",1/time.asSeconds());
+  ImGui::End();
+}
+
 int main(int argc, char *argv[])
 {
 
   sf::RenderWindow window({800,600},"fantasy_town_prototype");
   ImGui::SFML::Init(window);
   int current_index = 0;
-  //window.setVerticalSyncEnabled(true);
+  window.setVerticalSyncEnabled(true);
   World world;
-  //world.RegisterSystem<TestSystem>();
-  //world.RegisterSystem<Systems::AutomoveSystem>();
   world.RegisterSystem<Systems::MovementSystem>();
   world.RegisterSystem<Systems::RenderSystem>(window);
   world.RegisterSystem<Systems::TaskSystem>();
@@ -36,12 +46,13 @@ int main(int argc, char *argv[])
     ent.AddComponent<Components::Velocity>(0.0f,0.0f);
     ent.AddComponent<Components::Sprite>();
     ent.AddComponent<Components::TaskQueue>();
+    ent.AddComponent<Components::Inventory>();
 
     lumberyard.Register(ent);
 
     world.Finished(ent);
   }
-  int tag = 1;
+
   sf::Clock clock;
   sf::String time_string = "";
   float time_ticks = 0.0;
@@ -87,30 +98,23 @@ int main(int argc, char *argv[])
     ImGui::End();
 
     world.Update(16.0/1000.0);
-    //ImGui::Begin("Entities");
-    //for(auto&& entity : *world.GetEntities())
-    //{
-    //  std::string text = "Entity " +std::to_string(entity);
-    //  if(ImGui::TreeNode(text.data()))
-    //  {
-    //    auto vec = entity.GetAllComponents();
-    //
-    //    for(auto component : vec)
-    //    {
-    //      ImGui::Text("%s", component.data());
-    //    }
-    //    ImGui::TreePop();
-    //  }
-    //}
-    //ImGui::End();
-    ImGui::SetNextWindowPos(ImVec2(10,10));
-    if (!ImGui::Begin("Example: Fixed Overlay", nullptr, ImVec2(0,0), 0.3f, ImGuiWindowFlags_NoTitleBar|ImGuiWindowFlags_NoResize|ImGuiWindowFlags_NoMove|ImGuiWindowFlags_NoSavedSettings))
+    ImGui::Begin("Entities");
+    for(auto&& entity : *world.GetEntities())
     {
-        ImGui::End();
+      std::string text = "Entity " +std::to_string(entity);
+      if(ImGui::TreeNode(text.data()))
+      {
+        auto vec = entity.GetAllComponents();
+
+        for(auto component : vec)
+        {
+          ImGui::Text("%s", component.data());
+        }
+        ImGui::TreePop();
+      }
     }
-    ImGui::Text("Mouse Position: (%.1f,%.1f)", ImGui::GetIO().MousePos.x, ImGui::GetIO().MousePos.y);
-    ImGui::Text("FPS:%.f",1/time.asSeconds());
     ImGui::End();
+    RenderOverlay(time);
     ImGui::Render();
     window.display();
     //std::cout << std::chrono::duration<double,std::milli>(diff).count() <<"ms" << '\n';

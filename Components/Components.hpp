@@ -3,3 +3,4 @@
 #include "Velocity.hpp"
 #include "Job.hpp"
 #include "Sprite.hpp"
+#include "Inventory.hpp"

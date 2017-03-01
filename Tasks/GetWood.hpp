@@ -3,6 +3,7 @@
 #include "Tasks/GotoTask.hpp"
 #include "Tasks/ChopWood.hpp"
 #include "Tasks/Wait.hpp"
+#include "randutils.hpp"
 
 namespace flak
 {
@@ -12,7 +13,8 @@ namespace flak
     {
       GetWood()
       {
-        m_subtasks.push_back(new GotoTask(10,10));
+        randutils::mt19937_rng rng;
+        m_subtasks.push_back(new GotoTask(rng.uniform(0,100),rng.uniform(0,100)));
         m_subtasks.push_back(new Wait());
         m_subtasks.push_back(new ChopWood());
         m_subtasks.push_back(new GotoTask(400,300));

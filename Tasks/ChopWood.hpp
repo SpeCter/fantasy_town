@@ -1,5 +1,6 @@
 #pragma once
 #include "Tasks/Task.hpp"
+#include "Components/Inventory.hpp"
 
 namespace flak
 {
@@ -14,6 +15,7 @@ namespace flak
 
       void SetOwner(Entity entity) override
       {
+        m_inventory = entity.GetComponent<Components::Inventory>();
         m_assigned = true;
       }
       void Update(double dt) override
@@ -28,11 +30,13 @@ namespace flak
       {
         if(m_choptime < 0.0)
         {
+          m_inventory->m_items.push_back(Components::InventoryItem("Treetrunk","A chopped treetrunk"));
           return true;
         }
         return false;
       }
       double m_choptime;
+      flak::Components::Inventory* m_inventory;
     };
   }
 }
