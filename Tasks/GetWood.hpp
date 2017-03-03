@@ -36,11 +36,16 @@ namespace flak
 
       void SetOwner(Entity entity) override
       {
+        m_owner = entity;
         for(auto&& task : m_subtasks)
         {
           task->SetOwner(entity);
         }
         m_assigned = true;
+      }
+      uint64_t GetOwnerID() const override
+      {
+        return m_owner;
       }
     };
   }

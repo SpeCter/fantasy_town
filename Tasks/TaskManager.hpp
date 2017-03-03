@@ -18,6 +18,7 @@ namespace flak
   public:
     TaskManager(World& world);
     void RegisterTask(Tasks::Task* task);
+    void RegisterTask(Tasks::Task* task,uint64_t entity);
     void Register(Entity entity);
     void Update(double dt);
   protected:

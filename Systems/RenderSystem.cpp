@@ -1,5 +1,6 @@
 #include "RenderSystem.hpp"
 #include <SFML/Graphics/VertexArray.hpp>
+#include <SFML/System/Clock.hpp>
 
 flak::Systems::RenderSystem::RenderSystem(sf::RenderTarget& target)
   : m_target(target)
@@ -9,6 +10,7 @@ flak::Systems::RenderSystem::RenderSystem(sf::RenderTarget& target)
 
 void flak::Systems::RenderSystem::Update(double dt)
 {
+
   std::vector<sf::Vertex> verts;
   verts.reserve(m_components.size()*4);
   for(auto&& pack : m_components)
@@ -23,4 +25,9 @@ void flak::Systems::RenderSystem::Update(double dt)
     //m_target.draw(sprite->shape);
   }
   m_target.draw(&verts[0], verts.size(), sf::Quads);
+}
+
+const std::string flak::Systems::RenderSystem::GetName() const
+{
+  return "RenderSystem";
 }

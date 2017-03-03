@@ -10,7 +10,13 @@ void flak::Tasks::GotoTask::SetOwner(Entity entity)
 {
   m_velocity = entity.GetComponent<flak::Components::Velocity>();
   m_position = entity.GetComponent<flak::Components::Position>();
-  m_assigned = true;
+  m_owner     = entity;
+  m_assigned  = true;
+}
+
+uint64_t flak::Tasks::GotoTask::GetOwnerID() const
+{
+  return m_owner;
 }
 
 void flak::Tasks::GotoTask::Update(double dt)

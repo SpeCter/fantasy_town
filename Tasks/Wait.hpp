@@ -11,6 +11,11 @@ namespace flak
       void SetOwner(Entity entity) override
       {
         m_velocity = entity.GetComponent<Components::Velocity>();
+        m_owner = entity;
+      }
+      uint64_t GetOwnerID() const override
+      {
+        return m_owner;
       }
       void Update(double dt) override
       {

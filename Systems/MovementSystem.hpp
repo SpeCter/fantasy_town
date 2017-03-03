@@ -11,7 +11,8 @@ namespace flak
                                                    Components::Velocity>
     {
       MovementSystem();
-      void Update(double dt) override;
+      void Update(double dt = 0) override;
+      const std::string GetName() const override;
     };
   }
 }

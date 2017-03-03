@@ -17,6 +17,11 @@ namespace flak
       {
         m_inventory = entity.GetComponent<Components::Inventory>();
         m_assigned = true;
+        m_owner = entity;
+      }
+      uint64_t GetOwnerID() const override
+      {
+        return m_owner;
       }
       void Update(double dt) override
       {

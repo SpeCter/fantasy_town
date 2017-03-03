@@ -10,8 +10,8 @@ namespace Systems {
                                                  Components::Position>
     {
       RenderSystem(sf::RenderTarget& target);
-      void Update(double dt) override;
-
+      void Update(double dt = 0) override;
+      const std::string GetName() const override;
       sf::RenderTarget& m_target;
     };
   }

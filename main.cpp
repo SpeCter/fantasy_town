@@ -11,34 +11,85 @@
 #include "imgui.h"
 #include "imgui-SFML.h"
 
-using namespace flak;
+#include "TimestepLite.hpp"
+#include "TimeStep.hpp"
 
-void RenderOverlay(const sf::Time& time)
+using namespace flak;
+namespace ImGui
 {
+  static auto vector_getter = [](void* vec, int idx, const char** out_text)
+  {
+      auto& vector = *static_cast<std::vector<std::string>*>(vec);
+      if (idx < 0 || idx >= static_cast<int>(vector.size())) { return false; }
+      *out_text = vector.at(idx).c_str();
+      return true;
+  };
+
+  bool Combo(const char* label, int* currIndex, std::vector<std::string>& values)
+  {
+      if (values.empty()) { return false; }
+      return Combo(label, currIndex, vector_getter,
+          static_cast<void*>(&values), values.size());
+  }
+
+  bool ListBox(const char* label, int* currIndex, std::vector<std::string>& values)
+  {
+      if (values.empty()) { return false; }
+      return ListBox(label, currIndex, vector_getter,
+          static_cast<void*>(&values), values.size());
+  }
+
+}
+void RenderOverlay(const sf::Time& time,sf::RenderWindow& window)
+{
+  static int fps_index = 0;
   ImGui::SetNextWindowPos(ImVec2(10,10));
-  if (!ImGui::Begin("Example: Fixed Overlay", nullptr, ImVec2(0,0), 0.3f, ImGuiWindowFlags_NoTitleBar|ImGuiWindowFlags_NoResize|ImGuiWindowFlags_NoMove|ImGuiWindowFlags_NoSavedSettings))
+  if (!ImGui::Begin("Example: Fixed Overlay", nullptr, ImVec2(0,100), 0.3f, ImGuiWindowFlags_NoTitleBar|ImGuiWindowFlags_NoResize|ImGuiWindowFlags_NoMove|ImGuiWindowFlags_NoSavedSettings))
   {
       ImGui::End();
   }
   ImGui::Text("Mouse Position: (%.1f,%.1f)", ImGui::GetIO().MousePos.x, ImGui::GetIO().MousePos.y);
   ImGui::Text("FPS:%.f",1/time.asSeconds());
+  ImGui::PushItemWidth(60.0f);
+  if(ImGui::Combo("FPS:Limit",&fps_index," 30\0 60\0 90\0 None\0"))
+  {
+    switch(fps_index)
+    {
+      case 0:
+        window.setFramerateLimit(30);
+        break;
+      case 1:
+        window.setFramerateLimit(60);
+        break;
+      case 2:
+        window.setFramerateLimit(90);
+        break;
+      case 3:
+        window.setFramerateLimit(0);
+        break;
+    }
+  }
+  ImGui::PopItemWidth();
   ImGui::End();
 }
 
 int main(int argc, char *argv[])
 {
-
   sf::RenderWindow window({800,600},"fantasy_town_prototype");
   ImGui::SFML::Init(window);
+  flak::TimeStep timestep;
+  sf::Clock clock;
+  sf::Time current_time = clock.restart();
   int current_index = 0;
-  window.setVerticalSyncEnabled(true);
+  int entity_index = 0;
+  int fps_index = 0;
   World world;
-  world.RegisterSystem<Systems::MovementSystem>();
-  world.RegisterSystem<Systems::RenderSystem>(window);
-  world.RegisterSystem<Systems::TaskSystem>();
+  auto movement_system  = world.RegisterSystem<Systems::MovementSystem>();
+  auto render_system    = world.RegisterSystem<Systems::RenderSystem>(window);
+  auto task_system      = world.RegisterSystem<Systems::TaskSystem>();
   TaskManager lumberyard(world);
 
-  world.GetSystem<Systems::TaskSystem>()->RegisterTaskManager(&lumberyard);
+  task_system->RegisterTaskManager(&lumberyard);
   for(auto n = 0u;n < 100;++n)
   {
     auto ent = world.CreateEntity();
@@ -53,12 +104,12 @@ int main(int argc, char *argv[])
     world.Finished(ent);
   }
 
-  sf::Clock clock;
-  sf::String time_string = "";
-  float time_ticks = 0.0;
+
 
   while(window.isOpen())
   {
+    sf::Time current_time = clock.restart();
+    timestep.Update(current_time);
     sf::Event event;
     while(window.pollEvent(event))
     {
@@ -71,14 +122,11 @@ int main(int argc, char *argv[])
         }
       }
     }
-    auto time = clock.restart();
-    time_ticks += time.asSeconds();
 
-    ImGui::SFML::Update(window, time);
-
-    window.clear(sf::Color::Black);
+    ImGui::SFML::Update(window, timestep.GetStep());
     ImGui::Begin("Lumberyard"); // begin window
-      if (ImGui::Button("+"))
+      std::vector<std::string> entity_names = world.GetEntityNames();
+      if (ImGui::Button(" + "))
       {
         switch(current_index)
         {
@@ -87,34 +135,30 @@ int main(int argc, char *argv[])
           case 1:
             break;
           case 2:
-            lumberyard.RegisterTask(new Tasks::GetWood());
+            lumberyard.RegisterTask(new Tasks::GetWood(),std::stoull(entity_names[entity_index]));
             break;
           default:
             break;
         }
       }
       ImGui::SameLine();
+      ImGui::PushItemWidth(150);
       ImGui::Combo("Jobs:",&current_index,"Goto\0ChopWood\0GetWood\0\0");
+      ImGui::SameLine();
+      ImGui::PushItemWidth(50);
+      ImGui::Combo("Entity:",&entity_index,entity_names);
+      ImGui::PopItemWidth();
     ImGui::End();
-
-    world.Update(16.0/1000.0);
-    ImGui::Begin("Entities");
-    for(auto&& entity : *world.GetEntities())
+    RenderOverlay(current_time,window);
+    while(timestep.timeToIntegrate())
     {
-      std::string text = "Entity " +std::to_string(entity);
-      if(ImGui::TreeNode(text.data()))
-      {
-        auto vec = entity.GetAllComponents();
-
-        for(auto component : vec)
-        {
-          ImGui::Text("%s", component.data());
-        }
-        ImGui::TreePop();
-      }
+      movement_system->Update(timestep.GetStep().asSeconds());
     }
-    ImGui::End();
-    RenderOverlay(time);
+    task_system->Update(current_time.asSeconds());
+    window.clear(sf::Color::Black);
+    render_system->Update();
+
+
     ImGui::Render();
     window.display();
     //std::cout << std::chrono::duration<double,std::milli>(diff).count() <<"ms" << '\n';

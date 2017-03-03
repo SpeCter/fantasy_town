@@ -13,6 +13,7 @@ namespace flak
       }
       void AddTask();
       virtual void SetOwner(Entity entity) = 0;
+      virtual uint64_t GetOwnerID() const = 0;
       virtual void Update(double dt)  = 0;
       virtual bool Finished() const = 0;
       virtual bool IsAssigned()
@@ -21,7 +22,8 @@ namespace flak
       }
 
       bool m_assigned = false;
-      std::vector<Task*>   m_subtasks;
+      std::vector<Task*>  m_subtasks;
+      uint64_t m_owner = 0;
     };
 
   }

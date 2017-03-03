@@ -11,7 +11,8 @@ namespace flak
   {
     struct TaskSystem : public ComponentSystem<Components::TaskQueue>
     {
-      void Update(double dt) override;
+      void Update(double dt = 0) override;
+      const std::string GetName() const override;
       void RegisterTaskManager(TaskManager* manager);
 
       std::vector<TaskManager*> m_taskmanagers;

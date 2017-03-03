@@ -16,6 +16,11 @@ void flak::Systems::TaskSystem::Update(double dt)
   }
 }
 
+const std::string flak::Systems::TaskSystem::GetName() const
+{
+  return "TaskSystem";
+}
+
 void flak::Systems::TaskSystem::RegisterTaskManager(flak::TaskManager* manager)
 {
     m_taskmanagers.push_back(manager);

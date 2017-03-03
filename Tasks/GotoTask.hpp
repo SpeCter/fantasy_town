@@ -13,6 +13,7 @@ namespace flak
     public:
       GotoTask(int x, int y);
       void SetOwner(Entity entity) override;
+      uint64_t GetOwnerID() const override;
       void Update(double dt) override;
       bool Finished() const override;
       float x,y;

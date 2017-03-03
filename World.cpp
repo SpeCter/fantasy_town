@@ -1,21 +1,31 @@
 #include "World.hpp"
-
+#include "imgui.h"
+#include "imconfig-SFML.h"
+#include "SFML/System/Clock.hpp"
 World::World()
   :m_componentManager(*this)
 {
 
 }
 
-void World::Update(double delta)
-{
-  for(auto&& system : m_systems)
-  {
-    if(system.second->Enabled())
-    {
-      system.second->Update(delta);
-    }
-  }
-}
+//void World::Update(double delta)
+//{
+//  sf::Clock timer;
+//  std::vector<float> timings;
+//  ImGui::Begin("Profiler");
+//  for(auto&& system : m_systems)
+//  {
+//    timer.restart();
+//    if(system.second->Enabled())
+//    {
+//      system.second->Update(delta);
+//    }
+//    timings.push_back(timer.restart().asSeconds());
+//    ImGui::Text("%s",system.second->GetName().data());
+//  }
+//  ImGui::PlotHistogram("",&timings[0],timings.size(),0,nullptr,0.0,0.001f,{0,80});
+//  ImGui::End();
+//}
 
 Entity World::CreateEntity()
 {
@@ -26,6 +36,17 @@ Entity World::CreateEntity()
 Entity World::GetEntity(uint64_t entity_id)
 {
   return Entity(m_componentManager,entity_id);
+}
+
+std::vector<std::string> World::GetEntityNames()
+{
+  std::vector<std::string> entities;
+  entities.reserve(m_entities.size());
+  for(auto&& entity : m_entities)
+  {
+    entities.push_back(std::to_string(entity));
+  }
+  return entities;
 }
 
 void World::EntityUpdated(uint64_t entity)

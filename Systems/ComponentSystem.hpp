@@ -13,9 +13,9 @@ struct ComponentSystemBase
   {
   }
 
-  virtual void Update(double delta)         = 0;
+  virtual void Update(double delta = 0)         = 0;
   virtual void EntityUpdated(Entity entity) = 0;
-
+  virtual const std::string GetName() const = 0;
   void Enable()
   {
     m_enabled = true;
@@ -43,7 +43,7 @@ struct ComponentSystem : public ComponentSystemBase
   {
   }
 
-  virtual void Update(double dt) = 0;
+  virtual void Update(double dt = 0) = 0;
   virtual void EntityUpdated(Entity entity) override
   {
     std::vector<int> result = {entity.HasComponent<Args>()...};

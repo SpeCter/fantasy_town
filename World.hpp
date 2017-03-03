@@ -13,9 +13,10 @@ class World
 {
 public:
   World();
-  void Update(double delta);
+  //void Update(double delta);
   Entity CreateEntity();
   Entity GetEntity(uint64_t entity_id);
+  std::vector<std::string> GetEntityNames();
   void EntityUpdated(uint64_t entity);
   template<typename T,typename... Args>
   void AddComponent(uint64_t entity, Args&&... args)
@@ -24,9 +25,10 @@ public:
   }
 
   template<typename T,typename... Args>
-  void RegisterSystem(Args&&... args)
+  T* RegisterSystem(Args&&... args)
   {
     m_systems[Type::value<T>()] = new T(args...);
+    return static_cast<T*>(m_systems[Type::value<T>()]);
   }
   template<typename T>
   T* GetSystem()

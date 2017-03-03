@@ -30,7 +30,8 @@ SOURCES += main.cpp \
     Components/Sprite.cpp \
     Components/TaskQueue.cpp \
     Components/Inventory.cpp \
-    Components/InventoryItem.cpp
+    Components/InventoryItem.cpp \
+    TimeStep.cpp
 
 HEADERS += \
     Component.hpp \
@@ -58,7 +59,6 @@ HEADERS += \
     Components/Position.hpp \
     Components/Sprite.hpp \
     Components/Velocity.hpp \
-    Systems/AutomoveSystem.hpp \
     Systems/ComponentSystem.hpp \
     Systems/JobSystem.hpp \
     Systems/MovementSystem.hpp \
@@ -73,4 +73,5 @@ HEADERS += \
     Tasks/ChopWood.hpp \
     Tasks/Wait.hpp \
     Components/Inventory.hpp \
-    Components/InventoryItem.hpp
+    Components/InventoryItem.hpp \
+    TimeStep.hpp
