@@ -12,6 +12,10 @@ void flak::Systems::TaskSystem::Update(double dt)
     if(!queue->m_tasks.empty())
     {
       queue->m_tasks.front()->Update(dt);
+      if(queue->m_tasks.front()->Finished())
+      {
+        /* remove task */
+      }
     }
   }
 }

@@ -14,7 +14,7 @@ class World
 public:
   World();
   //void Update(double delta);
-  Entity CreateEntity();
+  Entity& CreateEntity();
   Entity GetEntity(uint64_t entity_id);
   std::vector<std::string> GetEntityNames();
   void EntityUpdated(uint64_t entity);

@@ -20,10 +20,15 @@ namespace flak
       {
         return m_assigned;
       }
+      virtual void SetID(uint64_t id)
+      {
+        m_id = id;
+      }
 
-      bool m_assigned = false;
       std::vector<Task*>  m_subtasks;
-      uint64_t m_owner = 0;
+      bool m_assigned   = false;
+      uint64_t m_id     = 0;
+      uint64_t m_owner  = 0;
     };
 
   }

@@ -27,7 +27,7 @@ World::World()
 //  ImGui::End();
 //}
 
-Entity World::CreateEntity()
+Entity& World::CreateEntity()
 {
   m_entities.push_back(Entity(m_componentManager,++next_id));
   return m_entities.back();

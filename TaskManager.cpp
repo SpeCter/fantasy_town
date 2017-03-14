@@ -24,7 +24,7 @@ void flak::TaskManager::RegisterTask(flak::Tasks::Task* task, uint64_t entity)
 void flak::TaskManager::Register(Entity entity)
 {
   //m_available_entities.push_back(entity);
-  //m_available_queues.push_back(entity.GetComponent<Components::TaskQueue>());
+  m_available_queues.push_back(entity.GetComponent<Components::TaskQueue>());
 }
 
 void flak::TaskManager::Update(double dt)
@@ -40,6 +40,27 @@ void flak::TaskManager::Update(double dt)
     ImGui::TreePop();
   }
   ImGui::End();
+
+  for(auto&& queue : m_available_queues)
+  { /* Look for workers */
+    if(queue->m_tasks.empty())
+    { /* Worker idle ? */
+      for(auto&& task : m_available_tasks)
+      { /* Task available ?*/
+        if(!task->IsAssigned())
+        { /* Task not assigned ?*/
+          queue->m_tasks.push_back(task);
+        }
+        else
+        {
+          if(task->GetOwnerID() == queue->m_entity_id)
+          {
+            queue->m_tasks.push_back(task);
+          }
+        }
+      }
+    }
+  }
   //for(auto&& task_queue : m_available_queues)
   //{
   //  if(!task_queue->m_tasks.empty()) continue;

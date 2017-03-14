@@ -29,7 +29,6 @@ public:
       }
 
       map[Type::value<T>()]->push_back(new T(entity,args...));
-      //ComponentAdded(entity);
    }
    template<typename T>
    void Remove(uint64_t entity)
@@ -37,7 +36,6 @@ public:
       auto container = map[Type::value<T>()];
       for(auto&& ent : container)
       {
-
       }
    }
 

@@ -31,7 +31,8 @@ SOURCES += main.cpp \
     Components/TaskQueue.cpp \
     Components/Inventory.cpp \
     Components/InventoryItem.cpp \
-    TimeStep.cpp
+    TimeStep.cpp \
+    Buildings/Lumberyard.cpp
 
 HEADERS += \
     Component.hpp \
@@ -74,4 +75,9 @@ HEADERS += \
     Tasks/Wait.hpp \
     Components/Inventory.hpp \
     Components/InventoryItem.hpp \
-    TimeStep.hpp
+    TimeStep.hpp \
+    Lumberyard.hpp \
+    randutils.hpp \
+    Components/TaskList.hpp \
+    Tasks/TaskFactory.hpp \
+    Buildings/Lumberyard.hpp

@@ -15,7 +15,7 @@ namespace flak
   private:
     sf::Time  m_step;
     sf::Time  m_overall;
-    double    m_accumulator;
+    float     m_accumulator;
 
   };
 

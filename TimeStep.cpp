@@ -2,7 +2,7 @@
 
 
 flak::TimeStep::TimeStep()
-  : m_step(sf::seconds(0.0016)),
+  : m_step(sf::seconds(0.0016f)),
     m_overall(sf::seconds(0.0)),
     m_accumulator(0.0)
 {

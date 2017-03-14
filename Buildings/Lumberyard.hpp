@@ -1,4 +1,16 @@
-#ifndef LUMBERYARD_HPP
-#define LUMBERYARD_HPP
+#pragma once
+#include "Entity.hpp"
 
-#endif // LUMBERYARD_HPP
+class World;
+namespace flak
+{
+  namespace Buildings
+  {
+    struct Lumberyard
+    {
+      Lumberyard(World& world);
+      World&  m_world;
+      Entity& m_entity;
+    };
+  }
+}

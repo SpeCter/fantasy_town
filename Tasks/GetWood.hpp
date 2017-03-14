@@ -4,6 +4,7 @@
 #include "Tasks/ChopWood.hpp"
 #include "Tasks/Wait.hpp"
 #include "randutils.hpp"
+#include "Tasks/TaskFactory.hpp"
 
 namespace flak
 {

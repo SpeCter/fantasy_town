@@ -11,8 +11,8 @@
 #include "imgui.h"
 #include "imgui-SFML.h"
 
-#include "TimestepLite.hpp"
 #include "TimeStep.hpp"
+#include "Buildings/Lumberyard.hpp"
 
 using namespace flak;
 namespace ImGui
@@ -88,6 +88,7 @@ int main(int argc, char *argv[])
   auto render_system    = world.RegisterSystem<Systems::RenderSystem>(window);
   auto task_system      = world.RegisterSystem<Systems::TaskSystem>();
   TaskManager lumberyard(world);
+  flak::Buildings::Lumberyard ly(world);
 
   task_system->RegisterTaskManager(&lumberyard);
   for(auto n = 0u;n < 100;++n)
@@ -95,7 +96,7 @@ int main(int argc, char *argv[])
     auto ent = world.CreateEntity();
     ent.AddComponent<Components::Position>(400.0f,300.0f);
     ent.AddComponent<Components::Velocity>(0.0f,0.0f);
-    ent.AddComponent<Components::Sprite>();
+    ent.AddComponent<Components::Sprite>(5,5);
     ent.AddComponent<Components::TaskQueue>();
     ent.AddComponent<Components::Inventory>();
 
