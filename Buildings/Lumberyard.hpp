@@ -1,0 +1,4 @@
+#ifndef LUMBERYARD_HPP
+#define LUMBERYARD_HPP
+
+#endif // LUMBERYARD_HPP
