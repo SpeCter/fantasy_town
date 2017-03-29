@@ -1,0 +1,4 @@
+#ifndef IMGUI_HELPER_HPP
+#define IMGUI_HELPER_HPP
+
+#endif // IMGUI_HELPER_HPP
