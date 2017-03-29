@@ -1,6 +1,7 @@
 #pragma once
 #include "Tasks/Task.hpp"
 #include "Components/Inventory.hpp"
+#include "World.hpp"
 
 namespace flak
 {
@@ -13,16 +14,23 @@ namespace flak
         m_choptime = 5.0;
       }
 
-      void SetOwner(Entity entity) override
+      void SetOwner(Entity* entity) override
       {
-        m_inventory = entity.GetComponent<Components::Inventory>();
+        m_inventory = entity->GetComponent<Components::Inventory>();
         m_assigned = true;
-        m_owner = entity;
+        m_owner = entity->GetID();
       }
-      uint64_t GetOwnerID() const override
+      void SetOwner(uint64_t entity) override
       {
-        return m_owner;
+        m_inventory = World::Get().GetEntity(entity).GetComponent<Components::Inventory>();
+        m_assigned  = true;
+        m_owner     = entity;
       }
+      const std::string GetTaskName() override
+      {
+        return "ChopWood";
+      }
+
       void Update(double dt) override
       {
         if(m_choptime < 0.0)

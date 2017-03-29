@@ -23,7 +23,6 @@ SOURCES += main.cpp \
     imgui-SFML.cpp \
     imgui.cpp \
     imgui_draw.cpp \
-    imgui_demo.cpp \
     Components/Velocity.cpp \
     Components/Position.cpp \
     Components/Job.cpp \
@@ -32,7 +31,9 @@ SOURCES += main.cpp \
     Components/Inventory.cpp \
     Components/InventoryItem.cpp \
     TimeStep.cpp \
-    Buildings/Lumberyard.cpp
+    Buildings/Lumberyard.cpp \
+    Tasks/GetWood.cpp \
+    imgui_helper.cpp
 
 HEADERS += \
     Component.hpp \
@@ -80,4 +81,5 @@ HEADERS += \
     randutils.hpp \
     Components/TaskList.hpp \
     Tasks/TaskFactory.hpp \
-    Buildings/Lumberyard.hpp
+    Buildings/Lumberyard.hpp \
+    imgui_helper.hpp

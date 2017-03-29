@@ -2,6 +2,8 @@
 #include "imgui.h"
 #include "imconfig-SFML.h"
 #include "SFML/System/Clock.hpp"
+#include "Components/TaskQueue.hpp"
+
 World::World()
   :m_componentManager(*this)
 {
@@ -69,4 +71,17 @@ void World::PrintSystems()
   {
     //std::cout << system->GetName() << (system->IsEnabled() ? " enabled" : " disabled") << '\n';
   }
+}
+
+std::vector<std::__cxx11::string> World::GetWorkerNames()
+{
+  std::vector<std::string> workers;
+  for(auto&& entity : m_entities)
+  {
+    if(entity.HasComponent<flak::Components::TaskQueue>())
+    {
+      workers.push_back(std::to_string(entity));
+    }
+  }
+  return workers;
 }

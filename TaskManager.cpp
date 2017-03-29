@@ -1,83 +1,123 @@
 #include "Tasks/TaskManager.hpp"
 #include "Tasks/Task.hpp"
-#include "Components/TaskQueue.hpp"
 #include "World.hpp"
+#include "Components/TaskQueue.hpp"
 #include "imgui.h"
 #include "imgui-SFML.h"
+#include <string>
+#include <algorithm>
 
-flak::TaskManager::TaskManager(World& world)
- : m_world(world)
-{
+uint64_t flak::TaskManager::m_next_id = 0;
 
-}
-void flak::TaskManager::RegisterTask(flak::Tasks::Task* task)
+flak::TaskManager::TaskManager()
 {
-  m_available_tasks.push_back(task);
 }
 
-void flak::TaskManager::RegisterTask(flak::Tasks::Task* task, uint64_t entity)
+void flak::TaskManager::Update(float dt)
 {
-  task->SetOwner(m_world.GetEntity(entity));
-  m_available_tasks.push_back(task);
-}
-
-void flak::TaskManager::Register(Entity entity)
-{
-  //m_available_entities.push_back(entity);
-  m_available_queues.push_back(entity.GetComponent<Components::TaskQueue>());
-}
-
-void flak::TaskManager::Update(double dt)
-{
-
-  ImGui::Begin("Lumberyard");
-  if(ImGui::TreeNode("Tasks:"))
+  static int current_index  = 0;
+  static int entity_index   = 0;
+  static bool repeat = false;
+  std::vector<std::string> m_available_tasks;
+  std::vector<std::string> m_running_tasks;
+  std::vector<std::string> m_entities;
+  for(auto&& task : m_tasks)
   {
-    for(auto&& task : m_available_tasks)
+    if(!task->IsAssigned())
     {
-      ImGui::Text("%s Entity:%d","GetWood",task->GetOwnerID());
+      m_available_tasks.push_back(std::to_string(task->m_id));
+    }
+  }
+  for(auto&& entity: m_free_entities)
+  {
+    m_entities.push_back(std::to_string(entity));
+  }
+  for(auto&& task : m_assigned_tasks)
+  {
+    std::string task_description;
+    task_description = "ID(" + std::to_string(task->GetID()) + ") " + task->GetTaskName() + "  Entity: " + std::to_string(task->GetOwnerID());
+    m_running_tasks.push_back(task_description);
+  }
+  ImGui::Begin("Lumberyard"); // begin window
+  if (ImGui::Button(" + "))
+  {
+    if(!m_available_tasks.empty() && !m_entities.empty())
+    {
+      uint64_t task_id    = std::stoull(m_available_tasks[current_index]);
+      uint64_t entity_id  = std::stoull(m_entities[entity_index]);
+      auto task = std::find_if(std::begin(m_tasks),std::end(m_tasks),[&](Tasks::Task* task)
+      {
+        return task->m_id == task_id;
+      });
+
+      (*task)->SetRepeatable(repeat);
+
+      AssignTask(*task,entity_id);
+      m_free_entities.erase(std::remove_if(m_free_entities.begin(), m_free_entities.end(),
+                                           [&](uint64_t ent)
+      {
+        return ent == entity_id;
+      }), m_free_entities.end());
+      current_index = 0;
+      entity_index  = 0;
+    }
+  }
+  ImGui::SameLine();
+  ImGui::PushItemWidth(150);
+  ImGui::Combo("Jobs:",&current_index,m_available_tasks);
+  ImGui::SameLine();
+  ImGui::PushItemWidth(50);
+  ImGui::Combo("Entity:",&entity_index,m_entities);
+  ImGui::SameLine();
+  ImGui::Checkbox("Repeat",&repeat);
+  ImGui::PopItemWidth();
+  ImGui::NewLine();
+  if(ImGui::TreeNode("Running Tasks:"))
+  {
+    for(auto&& description : m_running_tasks)
+    {
+      ImGui::Text("%s", description.data());
     }
     ImGui::TreePop();
   }
   ImGui::End();
-
-  for(auto&& queue : m_available_queues)
-  { /* Look for workers */
-    if(queue->m_tasks.empty())
-    { /* Worker idle ? */
-      for(auto&& task : m_available_tasks)
-      { /* Task available ?*/
-        if(!task->IsAssigned())
-        { /* Task not assigned ?*/
-          queue->m_tasks.push_back(task);
-        }
-        else
-        {
-          if(task->GetOwnerID() == queue->m_entity_id)
-          {
-            queue->m_tasks.push_back(task);
-          }
-        }
-      }
-    }
-  }
-  //for(auto&& task_queue : m_available_queues)
-  //{
-  //  if(!task_queue->m_tasks.empty()) continue;
-  //  for(unsigned int n = 0;n < m_available_tasks.size();++n)
-  //  {
-  //    if(m_available_tasks[n]->IsAssigned())
-  //    {
-  //      continue;
-  //    }
-  //    else
-  //    {
-  //      task_queue->m_tasks.push_back(m_available_tasks[n]);
-  //      m_available_tasks[n]->SetOwner(m_world.GetEntity(task_queue->m_entity_id));
-  //      break;
-  //    }
-  //  }
-  //}
 }
+
+void flak::TaskManager::AssignTask(flak::Tasks::Task* task, Entity* entity)
+{
+  task->SetOwner(entity);
+}
+
+void flak::TaskManager::AssignTask(flak::Tasks::Task* task, uint64_t entity_id)
+{
+  task->SetOwner(entity_id);
+  m_assigned_tasks.push_back(task);
+}
+
+void flak::TaskManager::AssignEntity(uint64_t entity_id)
+{
+  m_free_entities.push_back(entity_id);
+}
+
+std::vector<flak::Tasks::Task*>* flak::TaskManager::GetTasks()
+{
+  return &m_tasks;
+}
+
+flak::Tasks::Task* flak::TaskManager::GetTask(uint64_t id)
+{
+  auto it = std::find_if(m_tasks.begin(),m_tasks.end(),
+                         [id](flak::Tasks::Task* task)
+  {
+    return (task->m_id == id);
+  });
+  if(it != m_tasks.end())
+  {
+    return *(it);
+  }
+  return nullptr;
+}
+
+
 
 

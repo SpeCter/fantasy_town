@@ -9,12 +9,19 @@
 #include "Entity.hpp"
 #include "Type.hpp"
 
+
 class World
 {
 public:
   World();
   //void Update(double delta);
   Entity& CreateEntity();
+  static World& Get()
+  {
+    static World world;
+    return world;
+  }
+
   Entity GetEntity(uint64_t entity_id);
   std::vector<std::string> GetEntityNames();
   void EntityUpdated(uint64_t entity);
@@ -55,6 +62,7 @@ public:
   {
     return &m_entities;
   }
+  std::vector<std::string> GetWorkerNames();
 
 private:
   ComponentManager                                  m_componentManager;

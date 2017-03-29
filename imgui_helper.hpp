@@ -1,4 +1,10 @@
-#ifndef IMGUI_HELPER_HPP
-#define IMGUI_HELPER_HPP
+#pragma once
+#include <vector>
+#include <string>
 
-#endif // IMGUI_HELPER_HPP
+
+namespace ImGui
+{
+  bool Combo(const char* label, int* currIndex, std::vector<std::string>& values);
+  bool ListBox(const char* label, int* currIndex, std::vector<std::string>& values);
+}

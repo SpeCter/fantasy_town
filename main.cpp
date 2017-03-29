@@ -8,38 +8,14 @@
 #include "Tasks/TaskManager.hpp"
 #include "Tasks/GetWood.hpp"
 
-#include "imgui.h"
+#include "imgui_helper.hpp"
 #include "imgui-SFML.h"
 
 #include "TimeStep.hpp"
 #include "Buildings/Lumberyard.hpp"
 
 using namespace flak;
-namespace ImGui
-{
-  static auto vector_getter = [](void* vec, int idx, const char** out_text)
-  {
-      auto& vector = *static_cast<std::vector<std::string>*>(vec);
-      if (idx < 0 || idx >= static_cast<int>(vector.size())) { return false; }
-      *out_text = vector.at(idx).c_str();
-      return true;
-  };
 
-  bool Combo(const char* label, int* currIndex, std::vector<std::string>& values)
-  {
-      if (values.empty()) { return false; }
-      return Combo(label, currIndex, vector_getter,
-          static_cast<void*>(&values), values.size());
-  }
-
-  bool ListBox(const char* label, int* currIndex, std::vector<std::string>& values)
-  {
-      if (values.empty()) { return false; }
-      return ListBox(label, currIndex, vector_getter,
-          static_cast<void*>(&values), values.size());
-  }
-
-}
 void RenderOverlay(const sf::Time& time,sf::RenderWindow& window)
 {
   static int fps_index = 0;
@@ -79,18 +55,14 @@ int main(int argc, char *argv[])
   ImGui::SFML::Init(window);
   flak::TimeStep timestep;
   sf::Clock clock;
-  sf::Time current_time = clock.restart();
-  int current_index = 0;
   int entity_index = 0;
-  int fps_index = 0;
-  World world;
+  World& world = World::Get();
   auto movement_system  = world.RegisterSystem<Systems::MovementSystem>();
   auto render_system    = world.RegisterSystem<Systems::RenderSystem>(window);
   auto task_system      = world.RegisterSystem<Systems::TaskSystem>();
-  TaskManager lumberyard(world);
   flak::Buildings::Lumberyard ly(world);
 
-  task_system->RegisterTaskManager(&lumberyard);
+  task_system->RegisterTaskManager(&ly.m_task_mgr);
   for(auto n = 0u;n < 100;++n)
   {
     auto ent = world.CreateEntity();
@@ -100,7 +72,7 @@ int main(int argc, char *argv[])
     ent.AddComponent<Components::TaskQueue>();
     ent.AddComponent<Components::Inventory>();
 
-    lumberyard.Register(ent);
+    //lumberyard.Register(ent);
 
     world.Finished(ent);
   }
@@ -126,29 +98,13 @@ int main(int argc, char *argv[])
 
     ImGui::SFML::Update(window, timestep.GetStep());
     ImGui::Begin("Lumberyard"); // begin window
-      std::vector<std::string> entity_names = world.GetEntityNames();
-      if (ImGui::Button(" + "))
+      std::vector<std::string> entity_names = world.GetWorkerNames();//world.GetEntityNames();
+      if (ImGui::Button("Hire person"))
       {
-        switch(current_index)
-        {
-          case 0:
-            break;
-          case 1:
-            break;
-          case 2:
-            lumberyard.RegisterTask(new Tasks::GetWood(),std::stoull(entity_names[entity_index]));
-            break;
-          default:
-            break;
-        }
+        ly.m_task_mgr.AssignEntity(std::stoull(entity_names[entity_index]));
       }
       ImGui::SameLine();
-      ImGui::PushItemWidth(150);
-      ImGui::Combo("Jobs:",&current_index,"Goto\0ChopWood\0GetWood\0\0");
-      ImGui::SameLine();
-      ImGui::PushItemWidth(50);
-      ImGui::Combo("Entity:",&entity_index,entity_names);
-      ImGui::PopItemWidth();
+      ImGui::Combo("Person:",&entity_index,entity_names);
     ImGui::End();
     RenderOverlay(current_time,window);
     while(timestep.timeToIntegrate())

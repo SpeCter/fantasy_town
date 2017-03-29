@@ -1,6 +1,6 @@
 #pragma once
 #include "Components/Component.hpp"
-#include <vector>
+#include <deque>
 #include "Tasks/Task.hpp"
 
 class Entity;
@@ -13,7 +13,9 @@ namespace flak
     {
       TaskQueue(uint64_t entity_id);
       const std::string GetName() override;
-      std::vector<Tasks::Task*> m_tasks;
+      void Pop();
+      void Push(Tasks::Task* task);
+      std::deque<Tasks::Task*> m_tasks;
     };
   }
 }

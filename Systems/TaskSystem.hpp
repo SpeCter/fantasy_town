@@ -15,7 +15,7 @@ namespace flak
       const std::string GetName() const override;
       void RegisterTaskManager(TaskManager* manager);
 
-      std::vector<TaskManager*> m_taskmanagers;
+      std::deque<TaskManager*> m_taskmanagers;
     };
   }
 }

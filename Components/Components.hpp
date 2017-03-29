@@ -4,3 +4,4 @@
 #include "Job.hpp"
 #include "Sprite.hpp"
 #include "Inventory.hpp"
+#include "TaskList.hpp"

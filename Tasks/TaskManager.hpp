@@ -1,31 +1,44 @@
 #pragma once
 #include <vector>
 #include "Entity.hpp"
-
+#include "Tasks/Task.hpp"
+#include "imgui_helper.hpp"
+#include "imgui.h"
+#include "imgui-SFML.h"
+#include "World.hpp"
 
 namespace flak
 {
-  namespace Tasks
-  {
-    class Task;
-  }
-  namespace Components
-  {
-    class TaskQueue;
-  }
   class TaskManager
   {
   public:
-    TaskManager(World& world);
-    void RegisterTask(Tasks::Task* task);
-    void RegisterTask(Tasks::Task* task,uint64_t entity);
-    void Register(Entity entity);
-    void Update(double dt);
+    TaskManager();
+    template<typename T,typename... Args>
+    T* CreateTask(Args&&... args)
+    {
+      m_tasks.push_back(new T(args...));
+      m_tasks.back()->SetID(m_next_id++);
+      return static_cast<T*>(m_tasks.back());
+    }
+    template<typename T,typename... Args>
+    void CreateSubTask(Tasks::Task* task,Args&&... args)
+    {
+      task->AddTask(new T(args...));
+      task->m_subtasks.back()->SetID(m_next_id++);
+    }
+    void Update(float dt);
+    void AssignTask(Tasks::Task* task,Entity* entity);
+    void AssignTask(Tasks::Task* task,uint64_t entity_id);
+    void AssignEntity(uint64_t entity_id);
+    std::vector<Tasks::Task*>* GetTasks();
+
+    Tasks::Task* GetTask(uint64_t id);
   protected:
-    std::vector<Tasks::Task*>             m_available_tasks;
-    std::vector<Components::TaskQueue*>   m_available_queues;
-    std::vector<Entity>                   m_occupied_entities;
-    World& m_world;
+    std::vector<Tasks::Task*> m_tasks;
+    std::vector<Tasks::Task*> m_assigned_tasks;
+    std::vector<uint64_t>     m_free_entities;
+    std::vector<uint64_t>     m_used_entities;
+    static uint64_t           m_next_id;
   };
 }
 

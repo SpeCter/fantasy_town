@@ -1,4 +1,5 @@
 #include "Tasks/GotoTask.hpp"
+#include "World.hpp"
 
 flak::Tasks::GotoTask::GotoTask(int x, int y)
   : x(x),
@@ -6,17 +7,27 @@ flak::Tasks::GotoTask::GotoTask(int x, int y)
 {
 }
 
-void flak::Tasks::GotoTask::SetOwner(Entity entity)
+void flak::Tasks::GotoTask::SetOwner(Entity* entity)
 {
-  m_velocity = entity.GetComponent<flak::Components::Velocity>();
-  m_position = entity.GetComponent<flak::Components::Position>();
-  m_owner     = entity;
+  m_velocity  = entity->GetComponent<flak::Components::Velocity>();
+  m_position  = entity->GetComponent<flak::Components::Position>();
+  m_owner     = entity->GetID();
   m_assigned  = true;
 }
 
-uint64_t flak::Tasks::GotoTask::GetOwnerID() const
+void flak::Tasks::GotoTask::SetOwner(uint64_t ent)
 {
-  return m_owner;
+  auto world  = World::Get();
+  auto entity = world.GetEntity(ent);
+  m_velocity  = entity.GetComponent<flak::Components::Velocity>();
+  m_position  = entity.GetComponent<flak::Components::Position>();
+  m_owner     = ent;
+  m_assigned  = true;
+}
+
+const std::string flak::Tasks::GotoTask::GetTaskName()
+{
+  return "Goto(x:"+std::to_string(x)+" y:"+std::to_string(y)+")";
 }
 
 void flak::Tasks::GotoTask::Update(double dt)
