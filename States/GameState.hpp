@@ -1,15 +1,16 @@
-#ifndef GAMESTATE_HPP
-#define GAMESTATE_HPP
+#pragma once
 
-
-namespace ft {
-
-  class GameState
+namespace sf
+{
+  class Event;
+}
+namespace ft
+{
+  struct GameState
   {
-  public:
     GameState();
+    virtual void Update(float dt) = 0;
+    virtual void HandleInput(sf::Event& event) = 0;
+    virtual void Draw() = 0;
   };
-
-} // namespace ft
-
-#endif // GAMESTATE_HPP
+}

@@ -1,10 +1,9 @@
 #include "GameState.hpp"
 
-namespace ft {
-
+namespace ft
+{
   GameState::GameState()
   {
 
   }
-
 } // namespace ft

@@ -1,7 +1,10 @@
 #include "ComponentManager.hpp"
 #include "World.hpp"
 
-void ComponentManager::ComponentAdded(uint64_t entity)
+namespace ft
 {
-  m_world.EntityUpdated(entity);
+  void ComponentManager::ComponentAdded(uint64_t entity)
+  {
+    m_world.EntityUpdated(entity);
+  }
 }

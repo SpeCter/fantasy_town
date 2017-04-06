@@ -7,13 +7,13 @@
 #include <string>
 #include <algorithm>
 
-uint64_t flak::TaskManager::m_next_id = 0;
+uint64_t ft::TaskManager::m_next_id = 0;
 
-flak::TaskManager::TaskManager()
+ft::TaskManager::TaskManager()
 {
 }
 
-void flak::TaskManager::Update(float dt)
+void ft::TaskManager::Update(float dt)
 {
   static int current_index  = 0;
   static int entity_index   = 0;
@@ -83,31 +83,31 @@ void flak::TaskManager::Update(float dt)
   ImGui::End();
 }
 
-void flak::TaskManager::AssignTask(flak::Tasks::Task* task, Entity* entity)
+void ft::TaskManager::AssignTask(ft::Tasks::Task* task, Entity* entity)
 {
   task->SetOwner(entity);
 }
 
-void flak::TaskManager::AssignTask(flak::Tasks::Task* task, uint64_t entity_id)
+void ft::TaskManager::AssignTask(ft::Tasks::Task* task, uint64_t entity_id)
 {
   task->SetOwner(entity_id);
   m_assigned_tasks.push_back(task);
 }
 
-void flak::TaskManager::AssignEntity(uint64_t entity_id)
+void ft::TaskManager::AssignEntity(uint64_t entity_id)
 {
   m_free_entities.push_back(entity_id);
 }
 
-std::vector<flak::Tasks::Task*>* flak::TaskManager::GetTasks()
+std::vector<ft::Tasks::Task*>* ft::TaskManager::GetTasks()
 {
   return &m_tasks;
 }
 
-flak::Tasks::Task* flak::TaskManager::GetTask(uint64_t id)
+ft::Tasks::Task* ft::TaskManager::GetTask(uint64_t id)
 {
   auto it = std::find_if(m_tasks.begin(),m_tasks.end(),
-                         [id](flak::Tasks::Task* task)
+                         [id](ft::Tasks::Task* task)
   {
     return (task->m_id == id);
   });

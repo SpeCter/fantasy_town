@@ -7,7 +7,7 @@
 #include "imgui-SFML.h"
 #include "World.hpp"
 
-namespace flak
+namespace ft
 {
   class TaskManager
   {

@@ -2,13 +2,13 @@
 #include <SFML/Graphics/VertexArray.hpp>
 #include <SFML/System/Clock.hpp>
 
-flak::Systems::RenderSystem::RenderSystem(sf::RenderTarget& target)
+ft::Systems::RenderSystem::RenderSystem(sf::RenderTarget& target)
   : m_target(target)
 {
 
 }
 
-void flak::Systems::RenderSystem::Update(double dt)
+void ft::Systems::RenderSystem::Update(double dt)
 {
 
   std::vector<sf::Vertex> verts;
@@ -27,7 +27,7 @@ void flak::Systems::RenderSystem::Update(double dt)
   m_target.draw(&verts[0], verts.size(), sf::Quads);
 }
 
-const std::string flak::Systems::RenderSystem::GetName() const
+const std::string ft::Systems::RenderSystem::GetName() const
 {
   return "RenderSystem";
 }

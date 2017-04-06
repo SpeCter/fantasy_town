@@ -3,7 +3,7 @@
 #include <string>
 #include "Entity.hpp"
 
-namespace flak {
+namespace ft {
 namespace Components {
     struct Job : public Component<Job>
     {

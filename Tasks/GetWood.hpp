@@ -6,7 +6,7 @@
 #include "randutils.hpp"
 #include "Tasks/TaskFactory.hpp"
 
-namespace flak
+namespace ft
 {
   namespace Tasks
   {

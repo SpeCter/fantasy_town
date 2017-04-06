@@ -33,7 +33,10 @@ SOURCES += main.cpp \
     TimeStep.cpp \
     Buildings/Lumberyard.cpp \
     Tasks/GetWood.cpp \
-    imgui_helper.cpp
+    imgui_helper.cpp \
+    Game.cpp \
+    States/PlayState.cpp \
+    States/GameState.cpp
 
 HEADERS += \
     Component.hpp \
@@ -82,4 +85,8 @@ HEADERS += \
     Components/TaskList.hpp \
     Tasks/TaskFactory.hpp \
     Buildings/Lumberyard.hpp \
-    imgui_helper.hpp
+    imgui_helper.hpp \
+    Components/Building.hpp \
+    Game.hpp \
+    States/PlayState.hpp \
+    States/GameState.hpp

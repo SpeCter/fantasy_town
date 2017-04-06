@@ -2,7 +2,7 @@
 #include "Component.hpp"
 #include <SFML/Graphics/RectangleShape.hpp>
 
-namespace flak {
+namespace ft {
 namespace Components {
     struct Sprite : public Component<Sprite>
     {

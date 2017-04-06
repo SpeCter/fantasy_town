@@ -2,9 +2,9 @@
 #include "Entity.hpp"
 #include "Tasks/TaskManager.hpp"
 
-class World;
-namespace flak
+namespace ft
 {
+  class World;
   namespace Buildings
   {
     struct Lumberyard

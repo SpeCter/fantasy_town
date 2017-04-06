@@ -5,7 +5,7 @@
 
 struct Entity;
 
-namespace flak
+namespace ft
 {
   namespace Components
   {

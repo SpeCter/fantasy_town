@@ -3,7 +3,7 @@
 #include "Components/Inventory.hpp"
 #include "World.hpp"
 
-namespace flak
+namespace ft
 {
   namespace Tasks
   {
@@ -49,7 +49,7 @@ namespace flak
         return false;
       }
       double m_choptime;
-      flak::Components::Inventory* m_inventory;
+      ft::Components::Inventory* m_inventory;
     };
   }
 }

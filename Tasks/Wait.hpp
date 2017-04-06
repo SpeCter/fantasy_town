@@ -3,7 +3,7 @@
 #include "Components/Velocity.hpp"
 #include "World.hpp"
 
-namespace flak
+namespace ft
 {
   namespace Tasks
   {

@@ -5,7 +5,7 @@
 #include "Tasks/TaskManager.hpp"
 #include <vector>
 
-namespace flak
+namespace ft
 {
   namespace Systems
   {

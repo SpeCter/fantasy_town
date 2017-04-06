@@ -2,7 +2,7 @@
 #include "Entity.hpp"
 #include <deque>
 
-namespace flak
+namespace ft
 {
   namespace Tasks
   {

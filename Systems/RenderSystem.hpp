@@ -4,7 +4,7 @@
 #include "Components/Position.hpp"
 #include "SFML/Graphics/RenderTarget.hpp"
 
-namespace flak {
+namespace ft {
 namespace Systems {
     struct RenderSystem : public ComponentSystem<Components::Sprite,
                                                  Components::Position>

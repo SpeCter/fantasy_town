@@ -1,4 +1,11 @@
-#ifndef BUILDING_HPP
-#define BUILDING_HPP
-
-#endif // BUILDING_HPP
+#pragma once
+#include "Components/Component.hpp"
+namespace ft
+{
+  namespace Components
+  {
+    struct Building : public Component<Building>
+    {
+    };
+  }
+}

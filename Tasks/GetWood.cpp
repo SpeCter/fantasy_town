@@ -1,14 +1,14 @@
 #include "Tasks/GetWood.hpp"
 //#incldue "
 
-flak::Tasks::GetWood::GetWood()
+ft::Tasks::GetWood::GetWood()
   : n(0)
 {
   m_repeat    = false;
   m_assigned  = false;
 }
 
-void flak::Tasks::GetWood::Update(double dt)
+void ft::Tasks::GetWood::Update(double dt)
 {
   if(n >= m_subtasks.size() && m_repeat == true)
   {
@@ -25,12 +25,12 @@ void flak::Tasks::GetWood::Update(double dt)
   }
 }
 
-bool flak::Tasks::GetWood::Finished() const
+bool ft::Tasks::GetWood::Finished() const
 {
   return m_repeat && n >= m_subtasks.size();
 }
 
-void flak::Tasks::GetWood::SetOwner(Entity* entity)
+void ft::Tasks::GetWood::SetOwner(Entity* entity)
 {
   m_owner = entity->GetID();
   for(auto&& task : m_subtasks)
@@ -40,7 +40,7 @@ void flak::Tasks::GetWood::SetOwner(Entity* entity)
   m_assigned = true;
 }
 
-void flak::Tasks::GetWood::SetOwner(uint64_t ent)
+void ft::Tasks::GetWood::SetOwner(uint64_t ent)
 {
   m_owner = ent;
   for(auto&& task : m_subtasks)
@@ -50,7 +50,7 @@ void flak::Tasks::GetWood::SetOwner(uint64_t ent)
   m_assigned = true;
 }
 
-const std::string flak::Tasks::GetWood::GetTaskName()
+const std::string ft::Tasks::GetWood::GetTaskName()
 {
   if(n < m_subtasks.size())
   {

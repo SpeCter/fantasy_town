@@ -3,7 +3,7 @@
 #include "Components/Job.hpp"
 #include "Tasks/TaskManager.hpp"
 
-namespace flak
+namespace ft
 {
   namespace Systems
   {

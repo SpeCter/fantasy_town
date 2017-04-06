@@ -3,7 +3,7 @@
 #include "Components/Position.hpp"
 #include "Components/Velocity.hpp"
 
-namespace flak
+namespace ft
 {
   namespace Systems
   {

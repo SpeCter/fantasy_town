@@ -3,12 +3,12 @@
 #include "imgui-SFML.h"
 #include "SFML/System/Clock.hpp"
 
-flak::Systems::MovementSystem::MovementSystem()
+ft::Systems::MovementSystem::MovementSystem()
 {
 
 }
 
-void flak::Systems::MovementSystem::Update(double dt)
+void ft::Systems::MovementSystem::Update(double dt)
 {
   for(auto pack : m_components)
   {
@@ -19,7 +19,7 @@ void flak::Systems::MovementSystem::Update(double dt)
   }
 }
 
-const std::string flak::Systems::MovementSystem::GetName() const
+const std::string ft::Systems::MovementSystem::GetName() const
 {
   return "MovementSystem";
 }

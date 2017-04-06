@@ -1,6 +1,6 @@
 #include "Systems/TaskSystem.hpp"
 
-void flak::Systems::TaskSystem::Update(double dt)
+void ft::Systems::TaskSystem::Update(double dt)
 {
   for(auto&& manager : m_taskmanagers)
   {
@@ -28,12 +28,12 @@ void flak::Systems::TaskSystem::Update(double dt)
   }
 }
 
-const std::string flak::Systems::TaskSystem::GetName() const
+const std::string ft::Systems::TaskSystem::GetName() const
 {
   return "TaskSystem";
 }
 
-void flak::Systems::TaskSystem::RegisterTaskManager(flak::TaskManager* manager)
+void ft::Systems::TaskSystem::RegisterTaskManager(ft::TaskManager* manager)
 {
     m_taskmanagers.push_back(manager);
 }

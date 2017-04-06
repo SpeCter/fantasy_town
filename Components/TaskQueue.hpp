@@ -5,7 +5,7 @@
 
 class Entity;
 
-namespace flak
+namespace ft
 {
   namespace Components
   {

@@ -3,7 +3,7 @@
 #include "Components/InventoryItem.hpp"
 #include <vector>
 
-namespace flak
+namespace ft
 {
   namespace Components
   {

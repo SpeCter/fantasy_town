@@ -5,3 +5,5 @@
 #include "Sprite.hpp"
 #include "Inventory.hpp"
 #include "TaskList.hpp"
+#include "TaskQueue.hpp"
+

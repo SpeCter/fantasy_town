@@ -2,7 +2,7 @@
 #include "Component.hpp"
 
 
-namespace flak
+namespace ft
 {
   namespace Components
   {

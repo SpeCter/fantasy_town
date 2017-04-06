@@ -4,7 +4,7 @@
 #include <vector>
 #include <algorithm>
 
-namespace flak
+namespace ft
 {
   namespace Tasks
   {

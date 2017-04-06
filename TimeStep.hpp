@@ -1,7 +1,7 @@
 #pragma once
 #include <SFML/System/Time.hpp>
 
-namespace flak
+namespace ft
 {
   class TimeStep
   {
